@@ -1,0 +1,38 @@
+.section-first{
+	position: relative;
+	color: white;
+}
+.section-firs__img{
+	position: relative;
+	background: url("../images/img1-min.png");
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	float: left;
+	width: 55%;
+	height: 280px;
+	padding-left: 0;
+}
+.section-firs__txt{
+	position: relative;
+	float: right;
+	width: 35%;
+	padding-right: 5%; 
+	
+}
+/*MEDIA  ===============================*/
+@media screen and (max-width: 807px){
+.section-firs__img{
+	height: 220px;
+}
+}
+@media screen and (max-width: 636px){
+.section-firs__img{
+	width: 100%;
+}
+.section-firs__txt{
+	width: 70%;
+	padding-right: 15%; 
+	
+}
+}

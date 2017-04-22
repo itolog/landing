@@ -1,0 +1,52 @@
+.section-last{
+	background: #282b2f;
+	position: relative;
+	top: -15px;
+	color: white;
+	overflow: hidden;
+}
+.self-eff{
+	background: url('../images/gd.jpg');
+	background-repeat: no-repeat;
+	float: right;
+	width: 70%;
+	height: 400px;
+	-webkit-transition: 5s;
+	-o-transition: 5s;
+	-moz-transition: 5s;
+	transition: 5s;
+}
+.self-eff__cont{
+	position: relative;
+	padding: 5%;
+	background: #000;
+	opacity: 0.9;
+	width: 250px;
+	height: 200px;
+}
+.self-eff__cont--h2{
+	font-size: 1em;
+	color: #2ebd59;
+}
+.cle{
+	clear: both;
+}
+.layo{
+	padding: 5%; 
+	width: 39%;
+	float: left;
+}
+.spotify{
+	background: #2ebd55;
+	/* animation: slide 2s ease-in-out ; */
+}
+/*MEDIA =========================*/
+@media screen and (max-width: 398px){
+.layo{
+	width: 90%;
+}
+.self-eff__cont{
+	width: 70%;
+	height: 300px;
+}
+}

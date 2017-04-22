@@ -1,0 +1,14 @@
+.galery{
+	position: relative;
+}
+.galery__ul{
+	padding: 0;
+}
+.galery__ul--li{
+	float: left;
+	width: 25%;
+	cursor: pointer;
+}
+.galery__ul--img{
+	width: 100%;
+}

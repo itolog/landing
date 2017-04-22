@@ -1,0 +1,26 @@
+.instagram{
+	position: relative;
+	overflow: hidden;
+	top: -4px;
+}
+.instagram__view{
+	padding: 5%;
+	float: left;
+	width: 40%;
+	color: white;
+}
+.instagram__ul--li{
+	float: left;
+}
+/*MEDIA  ===================*/
+@media screen and (max-width: 695px){
+.instagram__view{
+	width: 80%;
+}
+.instagram__ul--li{
+	width: 80%;
+}
+.instagram__ul--img{
+	width: 100%;
+}
+}

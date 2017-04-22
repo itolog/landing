@@ -1,0 +1,146 @@
+.header{
+	position: relative;
+	height: 560px;
+	overflow: hidden;
+}
+.header-wrapper{
+	position:relative;
+	z-index: 5;
+	color:white;
+}
+/*backgroun animation==========================================*/
+.bg-wrapper{
+	/* height: 560px; */
+	overflow: hidden;
+}
+.bg{
+	position: absolute;
+	z-index: 4;
+	padding: 0;
+	margin: 0;	
+	width: 100%;
+}
+.bg__items{
+	position: inherit;
+	z-index: 0;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	float: left;
+	-webkit-transition: 2s;
+	-o-transition: 2s;
+	-moz-transition: 2s;
+	transition: 2s;
+}
+.active{
+	z-index: 1;
+	opacity: 1;
+	-webkit-transition: 3s;
+	-o-transition: 3s;
+	-moz-transition: 3s;
+	transition: 3s;
+}
+.bg__img{
+	width: 100%;
+	height: 560px;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+/*navigation============================================*/
+.nav__href{
+	color: white;
+	margin-right: 5px;
+	font-size: 17px;
+}
+.nav__href:hover{
+	border-bottom: 1px solid red;
+	color: red;
+	-webkit-transition: 2s;
+	-o-transition: 2s;
+	-moz-transition: 2s;
+	transition: 2s;
+}
+.naviganion{
+	background: black;
+	/* position: fixed; */
+	top: 0;
+	z-index: 600;
+	width: 100%;
+	height: 70px;
+	opacity: 0.8;
+}
+.naviganion-text{
+	display: none;
+}
+.close{
+	position: absolute;
+	display: none;
+	right: 27px;
+	top: 22px;
+	cursor: pointer;
+}
+.logo{
+	float: left;
+	margin: 20px 0px 0 20px;
+}
+.logo a{
+	color: lime;
+}
+.menu{
+	position: relative;
+	z-index: 30;
+	background: #000;
+	float: right;
+	margin: 20px 5% 0px 0px;
+}
+.nav__items{
+	display: inline-table;
+}
+.header-content{
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	margin-top: 200px;
+	text-align: center;
+}
+/*MEDIA  =========================================*/
+@media screen and (max-width:460px){
+.logo{
+	margin: 15px 10px 0 5%;
+}
+.naviganion-text{
+	display: block;
+	float: right;
+	width: 40px;
+	margin: 8px 10% 0 0;
+	cursor: pointer;
+}
+.menu{
+	position:absolute;
+	top: 50px;
+	width:100%; 
+	margin: 0; 
+	display: none;
+}
+.nav{
+	width: 100%;
+	padding-left: 0;
+}
+.nav__items{
+	display: block;
+}
+.nav__href{
+	background: black;
+	text-align: center;
+	padding: 10px 10px;
+	border-bottom: 1px solid red;
+}
+.nav__href:hover{
+	background: pink;
+	color: lime;
+	-webkit-transition: 2s;
+	-o-transition: 2s;
+	-moz-transition: 2s;
+	transition: 2s;
+}
+}

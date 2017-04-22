@@ -1,0 +1,99 @@
+.footer{
+	background: #212227;
+	color: white;
+	margin-top: -30px;
+}
+/*SECTION CONTACT*/
+.contact{
+	float: left;
+}
+/*contact-me===============*/
+.contact-me{
+	text-align: center;
+	margin-bottom: 40px;
+}
+/*follow-me===============*/
+.social{
+	width: 200px;
+}
+.social__li{
+	height: 40px;
+}
+.social__href{
+	color: white;
+	padding: 5%;
+	margin-left: 30px;
+	-webkit-transition: 2s;
+	-o-transition: 2s;
+	-moz-transition: 2s;
+	transition: 2s;
+}
+.social__href:hover{
+	color: blue;
+	background: lime;
+}
+.soc{
+	position: relative;
+	background: url("../images/sprite.jpg");
+	-webkit-background-size: 50px;
+	background-size: 150px 100px;
+	background-repeat: no-repeat;
+	height: 32px;
+	width: 27px;
+	float: left;
+	margin-right: 5px;
+}
+.soc__facebook{
+	position: relative;
+	background-position: -90px -14px;
+}
+.soc__VK{
+	position: relative;
+	background-position: -12px -51px;
+}
+.soc__ya{
+	position: relative;
+	background-position: -64px -51px;
+}
+/*SECTION MEDIA-INFO*/
+.media-info{
+	float: left;
+	width: 50%;
+	margin-left: 15px;
+}
+.subscribe__emael{
+	width: 80%;
+}
+.submit{
+	position: relative;
+	left: -44px;
+	width: 45px;
+	opacity: 0.3;
+}
+.sponsor__logo{
+	position: relative;
+	float: left;
+	padding: 5%;
+	font-size: 1.1em;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	border: 1px solid white;
+	-webkit-transition: 2s;
+	-o-transition: 2s;
+	-moz-transition: 2s;
+	transition: 2s;
+}
+.sponsor__logo:hover{
+	background: pink;
+	border: 1px solid lime;
+	cursor: pointer;
+}
+/*MEDIA =======*/
+@media screen and (max-width: 480px){
+.media-info{
+	width: 90%;
+}
+.contact{
+	width: 80%;
+}
+}
