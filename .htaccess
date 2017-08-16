@@ -13,4 +13,3 @@ ExpiresByType image/jpg "access plus 1 year"
 ExpiresByType image/x-icon "access 1 year"
 ExpiresByType application/x-shockwave-flash "access 1 year"
 </IfModule>
-

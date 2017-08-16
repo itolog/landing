@@ -16,14 +16,14 @@ var concat = require('gulp-concat');
 
 gulp.task('minify', function() {
   return gulp.src('*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({collapseWhitespace: true,removeComments: true,}))
     .pipe(gulp.dest('build'));
 });
 
 gulp.task('style', function(){
 	 gulp.src('source/*.css')
 		.pipe(plumber())
-        .pipe(concat('all.css'))
+        .pipe(concat('style.css'))
        	.pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
@@ -42,14 +42,16 @@ gulp.task('compress', function() {
 gulp.task('images', () =>{
    return gulp.src('images/*')
         .pipe(imagemin([
-			imagemin.optipng({optimization: 3}),
-			imagemin.jpegtran({progressive: true})
+          imagemin.gifsicle({interlaced: true}),
+          imagemin.jpegtran({progressive: true, optimizationLevel: 5}),
+          imagemin.optipng({optimizationLevel: 5}),
+          imagemin.svgo({plugins: [{removeViewBox: true}]})
 ]))
         .pipe(gulp.dest('build/images'));
 });
 
 gulp.task('build', function(fn){
-	run('style', 'images', 'minify', 'compress', fn);
+	run('style', 'minify', 'compress', fn);
 })
 
 gulp.task("clean", function(){

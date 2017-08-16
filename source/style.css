@@ -7,6 +7,7 @@
 @import url("footer.css");
 @import url("modal-window.css");
 @import url("animation.css");
+@import url("slide-animation.css");
 
 body{
 	max-width: 100%;
@@ -16,9 +17,11 @@ body{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	background: url('../images/be-min.jpg') no-repeat 100% 100%;
+	/* background-image: url('../images/be-min.jpg');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
 	background-position: center;
-	background-attachment: fixed;
+	background-attachment: fixed; */
 }
 a{
 	text-decoration: none;
@@ -87,7 +90,6 @@ p{
 	background: #000;
 	color: lime;
 }
-
 @media screen and (max-width:440px){
 	.modal__close{
 		z-index: 20;

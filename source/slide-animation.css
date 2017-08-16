@@ -1,0 +1,40 @@
+/*backgroun animation==========================================*/
+.bg-wrapper{
+	position: absolute;
+	overflow: hidden;
+	height: 560px;
+	min-width: 100%;
+	/* transform: translateZ(0); */
+}
+.bg{
+	position: relative;
+	padding:  0;
+}
+.bg__items{
+	position: absolute;
+	/* z-index: 0; */
+	opacity: 0;
+	width: 100%;
+	height:inherit;
+	transition: 2s;
+}
+ /* @keyframes active{
+	0%{
+		 
+	opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		z-index: 1;
+	}
+}  */
+.active{
+	 /* animation: active 3s linear; */
+	 /* z-index: 1; */
+	 opacity: 1;
+	 transition: 1s;
+} 
+.bg__img{
+	width: 100%;
+	height: 560px;
+}

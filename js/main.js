@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 // preloader
 $(window).on("load", function() {
-		$("#preloader").delay(350).fadeOut(500);
-	});	
+	$("#preloader").delay(350).fadeOut(500);
+});
 //preloader end
 $(document).ready(function(){
 	// // Обхот с посторонней вставкой бесплатного хоста
@@ -10,18 +10,22 @@ $(document).ready(function(){
 			bag.hide();
 /////////background animation
 function bgSlide(){
-	var bgItems = $('.bg li');
-	var liFirst = bgItems.first();
-	var liLast = bgItems.last();
-	var activeSlide = bgItems.filter('.active');
-	var nextSlide = activeSlide.next();
-	
-	nextSlide.addClass('active').siblings().removeClass('active');
-	if(liLast.hasClass('active')){
-		liFirst.addClass('active').siblings().removeClass('active');
-	}
+	var bgItems = $('.bg__items'),
+	 	slideNow = 1,
+		slideCount = bgItems.length,
+	 	liFirst = bgItems.first(),
+	 	liLast = bgItems.last(),
+	 	activeSlide = bgItems.filter('.active'),
+	 	nextSlide = activeSlide.next();
+ 
+	 if(liLast.hasClass('active')){
+	 	liLast.removeClass('active');
+	 	 liFirst.addClass('active').siblings().removeClass('active');
+	 }else {
+	 	nextSlide.addClass('active').siblings('li').removeClass('active');
+	 }
 }
-setInterval(bgSlide,10000);
+setInterval(bgSlide,5000);
 /////////////////MENU TOGGLE
 function menuToggle(){
 	var menu = $(".menu");
@@ -49,7 +53,7 @@ function menuToggle(){
 			if (window.innerWidth <=460) {
 				menu.hide();
 				closeMenu.hide();
-				txtMenu.show();
+				txtMenu.show(); 
 			}
 	});
 	$(window).resize(function() {
@@ -62,50 +66,55 @@ menuToggle();
 ////////SCROLL
 $(document).scroll(function(e){
 	e.preventDefault();
-	var galery = $('#galery');
-	var nav = $('.naviganion');
-	var galeryUl = $('.galery__ul');
-	var scrol = $(this).scrollTop() + window.innerHeight;
-	var selfEff = $('.self-eff');
-	var logo = $('.logo');
-	var menu = $('.menu');
-//
-	//animation section Galery
+	var galery = $('#galery'),
+		nav = $('.naviganion'),
+		top = $('.header-content'),
+		galeryUl = $('.galery__ul'),
+		scrol = $(this).scrollTop() + window.innerHeight,
+		selfEff = $('.self-eff'),
+		logo = $('.logo'),
+		menu = $('.menu'),
+		sectionFirsTxt = $('.section-firs__txt'),
+		sectionFirsImg = $('.section-firs__img');
+////animation section FIRST
 	if(scrol > galeryUl.offset().top){
-		galeryUl.css({
-			animation: 'opacity 6s ease-out'
+		nav.css({
+			height: '50px',
+			opacity: '1'
+		});
+	}else{
+		nav.css({
+			height: '',
+			opacity: ''
 		});
 	}
-///////////////////menu fixed animation
+/////////animation section Galery
 	if(scrol > galeryUl.offset().top){
-		nav.css({
-			'opacity': 1,
-			'height': '50px'
-		});
-		}else{
-		nav.css({
-			'opacity': '',
-			'height': ''
-		});
+		var galeryUl = $(".galery__ul li");
+
+		function addAn(el, eq, time) {
+			setTimeout(function(){
+				 el.eq(eq).addClass('galerryAnim');
+			},time);
+		}
+		addAn(galeryUl, 0, 600);
+		addAn(galeryUl, 1, 750);
+		addAn(galeryUl, 2, 850);
+		addAn(galeryUl, 3, 950);
 	}
 /////////////section selfEf animation
 	if(scrol > selfEff.offset().top){
-		selfEff.css({
-			animation: 'opacity 6s ease-out'
-		});
+		selfEff.addClass('selfEffAnimation');
+		$('.self-eff__cont').addClass('selfEffContAnimation');
 	}
 	//////animation section last
 	if(scrol > $('.spotify').offset().top){
-		$('.spotify').css({
-			animation: 'slide 2s linear',
-		});
+		$('.spotify').addClass('slide');
 	}
 	if(scrol > $('.itunes').offset().top){
-		$('.itunes').css({
-			animation: 'slideR 2s linear',
-		})
+		$('.itunes').addClass('sliderR');
 	}
-////////////////	
+
 ///////toUpp
 	if(scrol > galeryUl.offset().top){
 		$(".toUpp").css('opacity', 0.5);
@@ -125,6 +134,7 @@ var firstScroll = $('#first');
 first.click(function() {
 	$('body,html').animate({scrollTop: firstScroll.offset().top}, 1000);
 });
+
 /////galery
 var galery = $("a[href='#galery']");
 var galScroll = $('#galery'); 
@@ -164,7 +174,7 @@ function modalWindow(){
 	modalClos.on('click', function(){
 		modalWin.fadeOut(600);
 		modalWindowContent.children(img).remove();
-	})
+	});
 }
 modalWindow();
 //////////////

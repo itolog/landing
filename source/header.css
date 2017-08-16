@@ -1,50 +1,13 @@
 .header{
 	position: relative;
-	height: 560px;
 	overflow: hidden;
+	z-index: 50;
+	height: 560px;
 }
 .header-wrapper{
-	position:relative;
-	z-index: 5;
-	color:white;
-}
-/*backgroun animation==========================================*/
-.bg-wrapper{
-	/* height: 560px; */
-	overflow: hidden;
-}
-.bg{
-	position: absolute;
-	z-index: 4;
-	padding: 0;
-	margin: 0;	
-	width: 100%;
-}
-.bg__items{
-	position: inherit;
-	z-index: 0;
-	opacity: 0;
-	width: 100%;
-	height: 100%;
-	float: left;
-	-webkit-transition: 2s;
-	-o-transition: 2s;
-	-moz-transition: 2s;
-	transition: 2s;
-}
-.active{
-	z-index: 1;
-	opacity: 1;
-	-webkit-transition: 3s;
-	-o-transition: 3s;
-	-moz-transition: 3s;
-	transition: 3s;
-}
-.bg__img{
-	width: 100%;
 	height: 560px;
-	-webkit-background-size: cover;
-	background-size: cover;
+	position:relative;
+	color:blanchedalmond;
 }
 /*navigation============================================*/
 .nav__href{
@@ -53,16 +16,17 @@
 	font-size: 17px;
 }
 .nav__href:hover{
-	border-bottom: 1px solid red;
-	color: red;
-	-webkit-transition: 2s;
+	/* border-bottom: 1px solid red; */
+	background: white;
+	color: black;
+	/* -webkit-transition: 2s;
 	-o-transition: 2s;
 	-moz-transition: 2s;
-	transition: 2s;
+	transition: 2s; */
 }
 .naviganion{
 	background: black;
-	/* position: fixed; */
+	position: fixed;
 	top: 0;
 	z-index: 600;
 	width: 100%;
@@ -111,7 +75,6 @@
 .naviganion-text{
 	display: block;
 	float: right;
-	width: 40px;
 	margin: 8px 10% 0 0;
 	cursor: pointer;
 }

@@ -25,5 +25,13 @@
   },
   "keywords": [],
   "author": "Romanichencko Serhii",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itolog/landing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itolog/landing/issues"
+  },
+  "homepage": "https://github.com/itolog/landing#readme"
 }

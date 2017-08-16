@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>landing simpl one page</title>
+    <!--	SEO-->
+	<meta name="description" content="Landing simple page.Лэндинги и многостраничные сайты.SEO продвижение.Разработка и доработка сайтов.CMS WordPress">
+	<meta name="keywords" content="portfolio landing simpl front-end">
+	<meta name="author" content="Serhii Romanichencko">
+	<!--	favicon-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
-	<link rel='stylesheet' type='text/css' href='source/preloader.css'/>
-<!--       <script async src="js/html5shiv.js"></script>-->
+    <link rel='stylesheet' type='text/css' href='source/preloader.css'/>
   </head>
   <body>
   	<!-- preloader -->
@@ -16,9 +20,8 @@
 	  </div>
 	  <!-- preloader end -->
   	<div class="wrapp-all">
-	<!-- header================================================================= -->
-		<header class="header clearfix">
-			<div class="bg-wrapper">
+  	 <!-- slide animation -->
+	  	<div class="bg-wrapper">
 				<ul class="bg">
 					<li class ="bg__items active">
 						<img class="bg__img" src="images/pl1.jpg" alt="" />
@@ -29,9 +32,11 @@
 					<li class ="bg__items">
 						<img class="bg__img" src="images/p.jpg" alt="" />
 					</li>
-					<li class ="bg__items"></li>
 				</ul>
-			</div>
+		</div>
+			<!-- slide animation end -->
+	<!-- header================================================================= -->
+		<header class="header clearfix">
 			<div class="header-wrapper clearfix">
 				<div class="naviganion">
 					<div class="naviganion-text">
@@ -60,7 +65,7 @@
 					</nav>
 				</div>
 				<div class="header-content">
-					<h1 class ="header-content__h1">We are live to code</h1>
+					<h1 class ="header-content__h1">Development website</h1>
 					<p class ="header-content__paragraph" >In this part will be some content </p>
 				</div>
 			</div>
@@ -69,7 +74,7 @@
 		<!-- SectionFirst================================================-->
 		<section id="first" class="section-first clearfix">
 			<div class="section-firs__img"></div>
-			<div class="section-firs__txt div">
+			<div class="section-firs__txt">
 				<h3>sed faucibus quis</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ducimus aspernatur quibusdam, nihil asperiores. Id vel, nemo aliquam eius earum illo quas, quos <mark>dolores</mark> ad rem explicabo laborum quae consequuntur.</p>
 			</div>
@@ -91,23 +96,25 @@
 						<img class="galery__ul--img" src="images/index4.png" alt="index4">
 					</li>
 				</ul>
-			
 		</div>
 		<!-- GALERY END================================================-->
 		<!-- INSTAGRAM================================================-->
 		<section id="instagram" class="instagram clearfix">
-			<div class="instagram__view div">
-				<h3>instagram</h3>
-				<p>Etiam lacus dolor,tincidut vitae nisi in, vulputate placerat odio
-					.Pellentesque iaculis.
-				</p>
-				<div class="button">view on instagram</div>
-			</div>
-			<ul class="instagram__ul clearfix">
-					<li class="instagram__ul--li">
-						<img class="instagram__ul--img" src="images/index5.png" alt="">
-					</li>
+			<div class="imgScroll">
+				<!-- <img src="images/be-min.jpg" alt="" class="imgScrollImge"> -->
+				<div class="instagram__view">
+					<h3>instagram</h3>
+					<p>Etiam lacus dolor,tincidut vitae nisi in, vulputate placerat odio
+						.Pellentesque iaculis.
+					</p>
+					<div class="button">view on instagram</div>
+				</div>
+				<ul class="instagram__ul clearfix">
+						<li class="instagram__ul--li">
+							<img class="instagram__ul--img" src="images/index5.png" alt="">
+						</li>
 				</ul>
+			</div>
 		</section>
 		<!-- INSTAGRAM END================================================-->
 		<!-- sectionLast================================================-->
@@ -140,7 +147,7 @@
 				<div class="contact-me">
 					<h3>CONTACT ME</h3>
 					<p>Ukraine</p>
-					<p>+3(8096)977-22-34</p>
+					<p>paukanlove@gmail.com</p>
 				</div>
 				<div class="follow-me">
 					<ul class="social">
@@ -204,18 +211,25 @@
   ga('send', 'pageview');
 
 </script>
-    <script>
+<!-- jquery CDN -->
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  	<!-- modernizer CDN-->
+  	<script type="text/javascript" src= "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+   <!--  <script>
           window.jQuery || document.write
           ('<script src="js/jquery-3.1.0.min.js"><\/script>')
-    </script>
+    </script> -->
     <!-- Добавление CSS асинхронно-->
-     <script>
+     <script async>
     	$(document).ready(function() {
-    $("head").append("<link rel='stylesheet' type='text/css' href='css/normalize.css'/>");
+     // $("head").append("<link rel='stylesheet' type='text/css' href='source/preloader.css'/>");	
+    $("head").append("<link rel='stylesheet' type='text/css' href='source/normalize'>");
     $("head").append("<link rel='stylesheet' type='text/css' href='source/style.css'/>");
 		});
     </script>
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script async type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

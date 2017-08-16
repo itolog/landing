@@ -1,16 +1,30 @@
 .instagram{
 	position: relative;
 	overflow: hidden;
-	top: -4px;
+	top: -6px;
 }
 .instagram__view{
+	position: relative;
 	padding: 5%;
 	float: left;
 	width: 40%;
 	color: white;
 }
+.instagram__ul{
+	position: relative;
+}
 .instagram__ul--li{
 	float: left;
+}
+.imgScroll{
+	position: relative;
+	width: 100%;
+	height: 100% ;
+	background-image: url('../images/be-min.jpg');
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 /*MEDIA  ===================*/
 @media screen and (max-width: 695px){

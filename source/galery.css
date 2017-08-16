@@ -1,5 +1,7 @@
 .galery{
 	position: relative;
+	overflow: hidden;
+	background: #000;
 }
 .galery__ul{
 	padding: 0;

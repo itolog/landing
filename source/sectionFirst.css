@@ -1,5 +1,7 @@
 .section-first{
 	position: relative;
+	overflow: hidden;
+	background: #CD3D31;
 	color: white;
 }
 .section-firs__img{
@@ -10,15 +12,13 @@
 	background-repeat: no-repeat;
 	float: left;
 	width: 55%;
-	height: 280px;
+	height: 270px;
 	padding-left: 0;
 }
 .section-firs__txt{
 	position: relative;
 	float: right;
 	width: 35%;
-	padding-right: 5%; 
-	
 }
 /*MEDIA  ===============================*/
 @media screen and (max-width: 807px){
