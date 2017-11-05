@@ -7,7 +7,7 @@ $(window).on("load", function() {
 $(document).ready(function(){
 	// // Обхот с посторонней вставкой бесплатного хоста
 		var bag = $('#freewha');
-			bag.hide();
+			bag.remove();
 /////////background animation
 function bgSlide(){
 	var bgItems = $('.bg__items'),

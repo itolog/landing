@@ -21,7 +21,7 @@ gulp.task('minify', function() {
 });
 
 gulp.task('style', function(){
-	 gulp.src('source/*.css')
+	return gulp.src('source/*.css')
 		.pipe(plumber())
         .pipe(concat('style.css'))
        	.pipe(autoprefixer({
@@ -34,7 +34,7 @@ gulp.task('style', function(){
 
 
 gulp.task('compress', function() {
-  gulp.src('js/main.js')
+  return gulp.src('js/main.js')
     .pipe(uglyfly())
     .pipe(gulp.dest('build/js'))
 });

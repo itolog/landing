@@ -8,6 +8,7 @@
 @import url("modal-window.css");
 @import url("animation.css");
 @import url("slide-animation.css");
+/* @import url("preloader.css"); */
 
 body{
 	max-width: 100%;

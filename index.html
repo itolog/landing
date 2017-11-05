@@ -4,33 +4,34 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>landing simpl one page</title>
+    <title>landing simple one page</title>
     <!--	SEO-->
 	<meta name="description" content="Landing simple page.Лэндинги и многостраничные сайты.SEO продвижение.Разработка и доработка сайтов.CMS WordPress">
 	<meta name="keywords" content="portfolio landing simpl front-end">
 	<meta name="author" content="Serhii Romanichencko">
 	<!--	favicon-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+    <!-- preloader css -->
     <link rel='stylesheet' type='text/css' href='source/preloader.css'/>
   </head>
   <body>
   	<!-- preloader -->
-	  <div id="preloader">
-	  			<img alt="preloader" id="preloader__img" src="images/pre-3.gif">
-	  </div>
-	  <!-- preloader end -->
+	<div id="preloader">
+ 		<div id="loader"></div>
+	</div>
+	<!-- preloader end -->
   	<div class="wrapp-all">
   	 <!-- slide animation -->
 	  	<div class="bg-wrapper">
 				<ul class="bg">
 					<li class ="bg__items active">
-						<img class="bg__img" src="images/pl1.jpg" alt="" />
+						<img class="bg__img" src="images/pl1.jpg" alt="pl1" />
 					</li>
 					<li class ="bg__items">
-						<img class="bg__img" src="images/pl2-min.jpg" alt="" />
+						<img class="bg__img" src="images/pl2-min.jpg" alt="pl2" />
 					</li>
 					<li class ="bg__items">
-						<img class="bg__img" src="images/p.jpg" alt="" />
+						<img class="bg__img" src="images/p.jpg" alt="p" />
 					</li>
 				</ul>
 		</div>
@@ -200,6 +201,9 @@
 		<div class="modal-window__content"></div>
 	</div>
 	<div class="toUpp">UPP</div>
+	<!-- style -->
+	<link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'>
+	<link rel="stylesheet" type="text/css" href="source/style.css">
    <!--SCRIPTS=========================================================-->
    <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -209,7 +213,6 @@
 
   ga('create', 'UA-82994547-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 <!-- jquery CDN -->
 	<script
@@ -217,19 +220,9 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
   	<!-- modernizer CDN-->
-  	<script type="text/javascript" src= "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-   <!--  <script>
-          window.jQuery || document.write
-          ('<script src="js/jquery-3.1.0.min.js"><\/script>')
-    </script> -->
-    <!-- Добавление CSS асинхронно-->
-     <script async>
-    	$(document).ready(function() {
-     // $("head").append("<link rel='stylesheet' type='text/css' href='source/preloader.css'/>");	
-    $("head").append("<link rel='stylesheet' type='text/css' href='source/normalize'>");
-    $("head").append("<link rel='stylesheet' type='text/css' href='source/style.css'/>");
-		});
-    </script>
+  	<script type="text/javascript" src= "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js">
+  	</script>
+  	<!-- main js -->
     <script async type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
