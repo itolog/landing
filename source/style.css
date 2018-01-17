@@ -1,5 +1,4 @@
-/* @import url("preloader.css"); */
-@import url("header.css");
+/* @import url("header.css"); */
 @import url("sectionFirst.css");
 @import url("galery.css");
 @import url("instagram.css");
@@ -8,7 +7,6 @@
 @import url("modal-window.css");
 @import url("animation.css");
 @import url("slide-animation.css");
-/* @import url("preloader.css"); */
 
 body{
 	max-width: 100%;
@@ -18,11 +16,6 @@ body{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	/* background-image: url('../images/be-min.jpg');
-	-webkit-background-size: 100% 100%;
-	background-size: 100% 100%;
-	background-position: center;
-	background-attachment: fixed; */
 }
 a{
 	text-decoration: none;
@@ -40,10 +33,9 @@ p{
     display: table;
     clear: both;
 }
-.wrapp-all{
-	position: absolute;
+.main{
+	position: relative;
 	width: 100%;
-	top: 0;
 	z-index: 70;
 }
 .button{

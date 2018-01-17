@@ -85,10 +85,12 @@
 
 @keyframes galerryAnim{
    0%{
-    transform: scale(0.3,0.3);
-  }
+    opacity: 0.6;
+    transform: rotateY(360deg);
+  },
   100%{
-    transform: scale(1, 1);
+    opacity: 1;
+    transform: rotateY(0deg);
   }
 }
 .galerryAnim{

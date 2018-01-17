@@ -1,14 +1,15 @@
 "use strict";
 // preloader
-$(window).on("load", function() {
-	$("#preloader").delay(350).fadeOut(500);
-});
+// $(window).on("load", function() {
+// 	$("#preloader").fadeOut(500);
+// });
 //preloader end
 $(document).ready(function(){
-	// // Обхот с посторонней вставкой бесплатного хоста
-		var bag = $('#freewha');
-			bag.remove();
-/////////background animation
+ // Обхот с посторонней вставкой бесплатного хоста http://maximus.freewha.com
+// 		var bag = $('#freewha');
+// 			bag.remove();
+
+/////////    SLIDER
 function bgSlide(){
 	var bgItems = $('.bg__items'),
 	 	slideNow = 1,
@@ -26,6 +27,7 @@ function bgSlide(){
 	 }
 }
 setInterval(bgSlide,5000);
+
 /////////////////MENU TOGGLE
 function menuToggle(){
 	var menu = $(".menu");
@@ -63,8 +65,9 @@ function menuToggle(){
 	});
 }
 menuToggle();	
-////////SCROLL
-$(document).scroll(function(e){
+
+////////    SCROLL
+$(document).scroll(function(e) {
 	e.preventDefault();
 	var galery = $('#galery'),
 		nav = $('.naviganion'),
@@ -80,12 +83,14 @@ $(document).scroll(function(e){
 	if(scrol > galeryUl.offset().top){
 		nav.css({
 			height: '50px',
-			opacity: '1'
+			opacity: '1',
+			transition: '500ms'
 		});
 	}else{
 		nav.css({
 			height: '',
-			opacity: ''
+			opacity: '',
+			transition: '500ms'
 		});
 	}
 /////////animation section Galery
@@ -122,6 +127,7 @@ $(document).scroll(function(e){
 		$(".toUpp").css('opacity',0);
 	}
 });
+
 ///////////////Прокрутка ссылок
 $(".toUpp").on('click', function(event){
 	event.preventDefault();
@@ -159,6 +165,7 @@ var contactScroll = $('#contact');
 contact.click(function() {
 	$('body,html').animate({scrollTop: contactScroll.offset().top}, 1000);
 });
+
 ////////////////////////////MODAL WINDOW
 function modalWindow(){
 	var modalWin = $('.modal-window');
